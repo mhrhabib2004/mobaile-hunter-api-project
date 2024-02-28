@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>phone hunter api</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1 class="text-6xl mt-7 text-center">hey i am doing a api phone hunter</h1>
+    </header>
+    <main class="container mx-auto">
+        <section class="bg-gray-100 p-3 mt-4">
+            <input id="search-fild" type="text" placeholder="search hear" class="input input-bordered input-info w-full max-w-xs" />
+            <button onclick="searchHendelar()" class="btn btn-primary">search</button>
+
+        </section>
+
+        <section class="mt-7">
+
+            <div id="loding-spiner" class="text-center my-40 hidden">
+                <span class="loading loading-spinner text-success"></span>
+            </div>
+            <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+
+            </div>
+            <!-- show all button -->
+            <div id="show-all-container" class="hidden text-center mt-7">
+                <button onclick="handelShowall()" class="btn btn-active btn-secondary">Show all</button></div>
+        </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal" class="modal modal-bottom sm:modal-middle">
+  <div  class="modal-box">
+    <div id="show-ditels-div">
+
+    </div>
+    <!-- 
+    
+    <p class="py-4">Press ESC key or click the button below to close</p> -->
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/phone.js"></script>
+</body>
+
+</html>
